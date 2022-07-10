@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport">
+        <title>How Microprocessors Work</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <nav>
+            <div class="nav-one-container">
+                <div class="nav-one">
+                    <div class="title"><a href="https://www.howstuffworks.com/">howstuffworks</a></div>
+                    <form action="">
+                        <input type="text" placeholder="Search..." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="nav-two-container">
+                <div class="nav-two">
+                    <ul>
+                        <li><a href="https://health.howstuffworks.com/">Health</a></li>
+                        <li><a href="https://science.howstuffworks.com/">Science</a></li>
+                        <li><a href="https://home.howstuffworks.com/">Home & Garden</a></li>
+                        <li><a href="https://auto.howstuffworks.com/">Auto</a></li>
+                        <li><a href="https://electronics.howstuffworks.com/tech">Tech</a></li>
+                        <li><a href="https://people.howstuffworks.com/culture">Culture</a></li>
+                        <li><a href="https://money.howstuffworks.com/">Money</a></li>
+                        <li><a href="https://lifestyle.howstuffworks.com/">Lifestyle</a></li>
+                        <li><a href="https://entertainment.howstuffworks.com/">Entertainment</a></li>
+                        <li><a href="https://adventure.howstuffworks.com/">Adventure</a></li>
+                        <li><a href="https://animals.howstuffworks.com/">Animals</a></li>
+                        <li><a href="https://play.howstuffworks.com/">Quizzes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-three-container"></div>
+        </nav>
+        <header>
+            <div class="path">
+                <ul>
+                    <li><a href="https://www.howstuffworks.com/">HowStuffWorks</a></li>
+                    <li><a href="https://electronics.howstuffworks.com/tech">Tech</a></li>
+                    <li><a href="https://computer.howstuffworks.com/">Computer</a></li>
+                    <li><a href="https://computer.howstuffworks.com/computer-hardware-channel.htm">Computer Hardware</a></li>
+                    <li><a href="https://computer.howstuffworks.com/computer-cpu-channel.htm">CPU</a></li>
+                </ul>
+            </div>
+            <h1>How Microprocessors Work</h1>
+            <p>By: <a href="https://www.howstuffworks.com/about-marshall-brain.htm#brain">Marshall Brain</a> & 
+            <a href="https://www.howstuffworks.com/about-chris-pollette.htm">Chris Pollette</a> | Updated: Sep 22, 21</p>
+        </header>
+        <div class="menu-social">
+            <a href="#">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-flipboard"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-reddit"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </div>
+        <article>
+            <div class="gradient"></div>
+            <figure>
+                <img src="./images/processor.png" alt="">
+                <figcaption>Microprocessors are at the heart of all computers. <span>Jorg Greuel/Getty Images</span> </figcaption>
+            </figure>
+            <p>
+                The computer you are using to read this page uses a <strong>microprocessor</strong> to do its work. The microprocessor 
+                is the heart of any normal computer, whether it is a <a href="https://computer.howstuffworks.com/pc.htm">desktop machine</a>, a 
+                <a href="https://computer.howstuffworks.com/web-server.htm">server</a> or a <a href="https://computer.howstuffworks.com/laptop.htm">laptop</a>. 
+                There are many types of microprocessors, but they all do approximately the same thing in approximately the same way.
+            </p>
+            <p>
+                A microprocessor — also known as a <strong>CPU</strong> or central processing unit — is a complete computation engine that is fabricated on a single chip. 
+                The first microprocessor was the Intel 4004, introduced in 1971. The 4004 was not very powerful — all it could do was add and subtract, and it could only do that 4 
+                <a href="https://computer.howstuffworks.com/bytes.htm">bits</a> at a time. But it was amazing that everything was on one chip. Prior to the 4004, engineers 
+                built computers either from collections of chips or from discrete components (<a href="https://electronics.howstuffworks.com/diode.htm#pt2">transistors</a> 
+                wired one at a time). The 4004 powered one of the first portable electronic calculators. 
+            </p>
+            <div class="void"></div>
+            <p>If you have ever wondered what the microprocessor in your computer is doing, or if you have ever wondered about the differences between types of 
+                microprocessors, then read on. In this article, you will learn how fairly simple digital logic techniques allow a computer to do its job, whether 
+                it's playing a game or spell checking a document!
+            </p>
+            <div class="void"></div>
+            <div class="contents-table">
+                <h3>Contents</h3>
+                <ol>
+                    <li><a href="#section-1">Microprocessor Progression: Intel</a></li>
+                    <li><a href="#section-2">Microprocessor Logic</a></li>
+                    <li><a href="#section-3">Microprocessor Memory</a></li>
+                    <li><a href="#section-4">Microprocessor Instructions</a></li>
+                    <li><a href="#section-5">Microprocessor Performance and Trends</a></li>
+                    <li><a href="#section-6">64-bit Microprocessors</a></li>
+                </ol>
+            </div>
+            <div id="section-1">
+                <div class="about">
+                    <!-- <i class="fa fa-chevron-up"></i> -->
+                    <i class="fa fa-chevron-down" onclick="showandhide()"></i>
+                    <p>Microprocessor Progression: Intel</p>
+                </div>
+                <div id="section-one">
+                    <figure>
+                        <img src="./images/microprocessor2.png" alt="">
+                        <figcaption>Introduced by Intel in 1974, the 8080 microprocessor was the first microprocessor powerful enough to build a computer around. 
+                        <span>Science & Society Picture Library/Getty Images</span> </figcaption>
+                        </figure>
+                    <p>
+                        The first microprocessor to make it into a home computer <a href="http://jupiter.plymouth.edu/~harding/historymicro.html">was the intel 8080</a>,
+                        a complete 8-bit computer on one chip, introduced in 1974. The first microprocessor to make a real splash in the market was the Intel 
+                        8088, introduced in 1979 and incorporated into the IBM PC (which first appeared around 1982). If you are familiar with the PC market and its history, 
+                        you know that the PC market moved from the 8088 to the 80286 to the 80386 to the 80486 to the Pentium series to the Core series to the Xeon series. 
+                        All of these microprocessors are made by Intel and all of them are improvements on the basic design of the 8088.
+                    </p>
+                    <p>
+                        Since 2004, Intel has introduced microprocessors with multiple cores and millions more transistors. But even these microprocessors follow the 
+                        same general rules as earlier chips.
+                    </p>
+                    <p>An Intel Core i9 processor can have <a href="https://www.bestbuy.com/site/intel-core-i9-9900k-9th-generation-8-core-16-thread-3-6-ghz-5-0-ghz-turbo-socket-lga-1151-unlocked-desktop-processor/6302019.p?skuId=6302019">up to eight cores</a>, 
+                        each of which can execute any piece of code that ran on the original 8088, only about 6,700 times faster! Each core can handle multiple 
+                        threads of instructions, allowing the computer to manage tasks more efficiently.
+                    </p>
+                    <p>
+                        Intel's product range has widened substantially from the 1970s. As of this writing, the company still makes Pentium and Core CPUs for computers, 
+                        but higher-performance PCs and servers may use the Xeon chip. In addition, Intel offers the Celeron and Atom processor lines. Celeron is aimed at 
+                        entry-level computer users, and Atom processors are better for mobile devices and devices that are part of the Internet of Things.
+                    </p>
+                    <p>
+                        While Intel still has a large portion of the market, it has more than its fair share of competitors. AMD competes with Intel in the PC processor 
+                        market, but also does big business in graphics processor chips that are popular with PC gamers. Nvidia, famous for its graphics chips, also manufactures CPUs. 
+                        In 2020, Apple introduced its M-series chips, which are replacing the Intel chips Apple was using for its Macintosh computers. Samsung 
+                        <a href="https://wccftech.com/samsung-might-design-its-own-custom-cpu-as-it-seeks-former-apple-and-amd-engineers/">may also be working</a>
+                        on its own proprietary processor designs. Many more companies build processors for other electronics uses, like cars and smart home products. 
+                        The market is getting more and more competitive.
+                    </p>
+                    <div class="box-one">
+                        <h3>What's a chip?</h3>
+                        <p>A <strong>chip</strong> is also called an <strong>integrated circuit</strong>. Generally it is a small, thin piece of silicon onto which the 
+                            transistors making up the microprocessor have been etched. A chip might be as large as an inch on a side and can contain tens of millions of transistors. 
+                            Simpler models might consist of a few thousand transistors etched onto a chip just a few millimeters square. It has become common to see chips 
+                            in all kinds of devices with multiple cores, each of which is a processor.
+                        </p>
+                    </div>
+                </div>
+                <div id="section-2">
+                    <div class="about">
+                        <!-- <i class="fa fa-chevron-up"></i> -->
+                        <i class="fa fa-chevron-down" onclick="showandhide()"></i>
+                        <p>Microprocessor Logic</p>
+                    </div>
+                    <div id="section-two">
+                        <figure>
+                            <img src="./images/microprocessor3.png" alt="">
+                            <figcaption>The Intel Pentium 4 processor was Intel's fastest processor when it was introduced in 2001.  
+                            <span>Intel/Newsmakers</span> </figcaption>
+                            </figure>
+                        <p>
+                            To understand how a microprocessor works, it is helpful to look inside and learn about the logic used to create one. In the process you can also 
+                            learn about <strong>assembly language</strong>  — the native language of a microprocessor — and many of the things that engineers can do to 
+                            boost the speed of a processor.
+                        </p>
+                        <p>
+                            A microprocessor executes a collection of machine instructions that tell the processor what to do. Based on the instructions, a microprocessor 
+                            does three basic things:
+                            <ul>
+                                <li>Using its ALU (Arithmetic/Logic Unit), a microprocessor can perform mathematical operations like addition, subtraction, 
+                                    multiplication and division. Modern microprocessors contain complete floating-point processors that can perform extremely sophisticated 
+                                    operations on large floating-point numbers.</li>
+                                <li>A microprocessor can move data from one <a href="https://computer.howstuffworks.com/computer-memory.htm">memory</a> location to another.</li>
+                                <li>A microprocessor can make decisions and jump to a new set of instructions based on those decisions.</li>
+                            </ul>
+                        </p>
+                        <p>
+                            There may be very sophisticated things that a microprocessor does, but those are its three basic activities. The following diagram shows
+                            an extremely simple microprocessor capable of doing those three things:
+                        </p>
+                        <figure>
+                            <img src="./images/diagram.png" alt="">
+                            <figcaption>This diagram shows a simple microprocessor and its components and capabilities. 
+                                <span>HowStuffWorks</span>
+                            </figcaption>
+                        </figure>
+                        <p>This is about as simple as a microprocessor gets. This microprocessor has:
+                            <ul>
+                                <li> An <strong>address bus</strong> (that may be 8, 16, 32 or 64 bits wide) that sends an address to memory</li> 
+                                <li> A <strong>data bus</strong> (that may be 8, 16, 32 or 64 bits wide) that can send data to memory or receive data from memory</li>
+                                <li> An <strong>RD</strong> (read) and <strong>WR</strong> (write) line to tell the memory whether it should set or get the addressed location</li>
+                                <li> A <strong>clock line</strong> that lets a clock pulse sequence the processor</li>
+                                <li> A <strong>reset line</strong> that resets the program counter to zero (or whatever) and restarts execution</li>
+                            </ul>
+                        </p>
+                        <p>Let's assume that both the address and data buses are 8 bits wide in this example.</p>
+                        <p>Here are the components of this simple microprocessor:
+                            <ul>
+                                <li>Registers A, B and C are simply latches made out of flip-flops. (See the section on "edge-triggered latches" in
+                                    <a href="https://computer.howstuffworks.com/boolean.htm">How Boolean Logic Works</a> for details.)
+                                </li>
+                                <li>The address latch is just like registers A, B and C.</li>
+                                <li>The program counter is a latch with the extra ability to increment by 1 when told to do so, and to reset to zero when told to do so.</li>
+                                <li>The ALU could be as simple as an 8-bit adder (see the section on adders in <a href="https://computer.howstuffworks.com/boolean.htm">
+                                    How Boolean Logic Works</a> for details), or it might be able to add, subtract, multiply and divide 8-bit values. Let's assume the latter here. </li>
+                                <li>The test register is a special latch that can hold values from comparisons performed in the ALU. An ALU can normally compare two 
+                                    numbers to determine if they are equal, if one is greater than the other, etc. The test register can also normally hold a carry bit from the 
+                                    last stage of the adder. It stores these values in flip-flops and then the instruction decoder can use the values to make decisions.</li>
+                                <li>There are six boxes marked "3-State" in the diagram. These are <strong>tri-state buffers</strong>. A tri-state buffer can pass a 1, a 0 or it can 
+                                    essentially disconnect its output (imagine a switch that totally disconnects the output line from the wire that the output is heading toward). 
+                                    A tri-state buffer allows multiple outputs to connect to a wire, but only one of them to actually drive a 1 or a 0 onto the line.</li>
+                                <li>The instruction register and instruction decoder are responsible for controlling all of the other components.</li>
+                            </ul>
+                        </p>
+                        <p>Although they are not shown in this diagram, there would be control lines from the instruction decoder that would:
+                            <ul>
+                                <li>Tell the A register to latch the value currently on the data bus</li>
+                                <li>Tell the B register to latch the value currently on the data bus</li>
+                                <li>Tell the C register to latch the value currently output by the ALU</li>
+                                <li>Tell the program counter register to latch the value currently on the data bus</li>
+                                <li>Tell the address register to latch the value currently on the data bus</li>
+                                <li>Tell the instruction register to latch the value currently on the data bus</li>
+                                <li>Tell the program counter to increment</li>
+                                <li>Tell the program counter to reset to zero</li>
+                                <li>Activate any of the six tri-state buffers (six separate lines)</li>
+                                <li>Tell the ALU what operation to perform</li>
+                                <li>Tell the test register to latch the ALU's test bits</li>
+                                <li>Activate the RD line</li>
+                                <li>Activate the WR line</li>
+                            </ul>
+                        </p>
+                        <p>
+                            Coming into the instruction decoder are the bits from the test register and the clock line, as well as the bits from the instruction register.
+                        </p>
+                    </div>
+                </div>
+                <div id="section-3">
+                    <div class="about">
+                        <!-- <i class="fa fa-chevron-up"></i> -->
+                        <i class="fa fa-chevron-down" onclick="showandhide()"></i>
+                        <p>Microprocessor Memory</p>
+                    </div>
+                    <div id="section-three">
+                        <p>
+                            The previous section talked about the address and data buses, as well as the RD and WR lines. These buses and lines connect 
+                            either to RAM or ROM — generally both. In our sample microprocessor, we have an address bus 8 bits wide and a 
+                            data bus 8 bits wide. That means that the microprocessor can address 256 bytes of memory, and it can 
+                            read or write 8 bits of the memory at a time. Let's assume that this simple microprocessor has 128 
+                            bytes of ROM starting at address 0 and 128 bytes of RAM starting at address 128.
+                        </p>
+                        <p><a href="https://computer.howstuffworks.com/rom.htm">ROM</a>stands for read-only memory. A ROM chip is programmed with a 
+                            permanent collection of pre-set bytes. The address bus tells the ROM chip which byte to get and place on the data bus. 
+                            When the RD line changes state, the ROM chip presents the selected byte onto the data bus. 
+                        </p>
+                        <p><a href="https://computer.howstuffworks.com/ram.htm">RAM</a> stands for random-access memory. RAM contains bytes 
+                            of information, and the microprocessor can read or write to those bytes depending on whether the RD or WR line is signaled. 
+                            One problem with today's RAM chips is that they forget everything once the <a href="https://computer.howstuffworks.com/power-supply.htm">power</a> 
+                            goes off. That is why the computer needs ROM. 
+                        </p>
+                        <p>
+                            By the way, nearly all computers contain some amount of ROM (it is possible to create a simple computer that contains no RAM — many 
+                            <a href="https://electronics.howstuffworks.com/microcontroller.htm"> microcontrollers</a> do this by placing a handful of RAM bytes on the 
+                            processor chip itself — but generally impossible to create one that contains no ROM). On a <a href="https://computer.howstuffworks.com/pc.htm">PC</a>,
+                            the ROM is called the <a href="https://computer.howstuffworks.com/bios.htm">BIOS</a>  (Basic Input/Output System). When the microprocessor starts, 
+                            it begins executing instructions it finds in the BIOS. The BIOS instructions do things like test the hardware in the machine, and then it goes to the 
+                            hard disk to fetch the <strong>boot sector</strong> (see <a href="https://computer.howstuffworks.com/hard-disk.htm">How Hard Disks Work</a> for details).
+                            This boot sector is another small program, and the BIOS stores it in RAM after reading it off the disk. The microprocessor then begins executing the 
+                            boot sector's instructions from RAM. The boot sector program will tell the microprocessor to fetch something else from the hard disk into RAM, which 
+                            the microprocessor then executes, and so on. This is how the microprocessor loads and executes the entire <a href="https://computer.howstuffworks.com/operating-system.htm">operating system</a>.
+                        </p>
+                    </div>
+                </div>
+                <div id="section-4">
+                    <div class="about">
+                        <!-- <i class="fa fa-chevron-up"></i> -->
+                        <i class="fa fa-chevron-down" onclick="showandhide()"></i>
+                        <p>Microprocessor Instructions</p>
+                    </div>
+                    <div id="section-four">
+                        <p>
+                            Even the incredibly simple microprocessor shown in the previous example has a fairly large set of instructions that it can perform. The collection of instructions is implemented as bit patterns, 
+                            each one of which has a different meaning when loaded into the instruction register. Humans are not particularly good at remembering bit patterns,
+                             so a set of short words are defined to represent the different bit patterns. This collection of words is called the <strong>assembly language</strong> of the processor. 
+                             An <strong>assembler</strong> can translate the words into their bit patterns very easily, and then the output of the assembler is placed in memory for the microprocessor to execute.
+                        </p>
+                        <p>
+                            Here's the set of assembly language instructions that the designer might create for the simple microprocessor in our example:
+                            <ul>
+                                <li><strong>LOADA mem</strong> - Load register A from memory address</li>
+                                <li><strong>LOADB mem</strong> - Load register B from memory address</li>
+                                <li><strong>CONB con</strong> - Load a constant value into register B</li>
+                                <li><strong>SAVEB mem</strong> - Save register B to memory address</li>
+                                <li><strong>SAVEC mem</strong> - Save register C to memory address</li>
+                                <li><strong>ADD</strong> - Add A and B and store the result in C</li>
+                                <li><strong>SUB</strong> - Subtract A and B and store the result in C</li>
+                                <li><strong>MUL</strong> - Multiply A and B and store the result in C</li>
+                                <li><strong>DIV</strong> - Divide A and B and store the result in C</li>
+                                <li><strong>COM</strong> - Compare A and B and store the result in test</li>
+                                <li><strong>JUMP addr</strong> - Jump to an address</li>
+                                <li><strong>JEQ addr</strong> - Jump, if equal, to address</li>
+                                <li><strong>JNEQ addr</strong> - Jump, if not equal, to address</li>
+                                <li><strong>JG addr</strong> - Jump, if greater than, to address</li>
+                                <li><strong>JGE addr</strong> - Jump, if greater than or equal, to address</li>
+                                <li><strong>JL addr</strong> - Jump, if less than, to address</li>
+                                <li><strong>JLE addr</strong> - Jump, if less than or equal, to address</li>
+                                <li><strong>STOP</strong> - Stop execution</li>
+                            </ul>
+                        </p>
+                        <p>If you have read <a href="https://computer.howstuffworks.com/c.htm">How C Proramming Works</a>, then you know that this simple 
+                            piece of C code will calculate the factorial of 5 (where the factorial of 5 = 5! = 5 * 4 * 3 * 2 * 1 = 120): </p>
+                        <p class="example">a=1;f=1;while (a <= 5){ f = f * a; a = a + 1;}</p>
+                        <p>At the end of the program's execution, the variable f contains the factorial of 5.</p>
+                        <h4>Assembly Language</h4>
+                        <p>A <strong>C compiler</strong> translates this C code into assembly language. Assuming that RAM starts at address 128 in this 
+                            processor, and ROM (which contains the assembly language program) starts at address 0, then for our simple microprocessor 
+                            the assembly language might look like this:
+                        </p>
+                        <p class="example">// Assume a is at address 128// Assume F is at address 1290 CONB 1 // a=1;1 SAVEB 1282 CONB 1 // f=1;3 SAVEB 
+                            1294 LOADA 128 // if a > 5 the jump to 175 CONB 56 COM7 JG 178 LOADA 129 // f=f*a;9 LOADB 12810 MUL11 SAVEC 12912 LOADA 128 
+                            // a=a+1;13 CONB 114 ADD15 SAVEC 12816 JUMP 4 // loop back to if17 STOP</p>
+                        <h4>ROM</h4>
+                        <p>So now the question is, "How do all of these instructions look in ROM?" Each of these assembly language instructions must be 
+                            represented by a binary number. For the sake of simplicity, let's assume each assembly language instruction is given a unique 
+                            number, like this:
+                            <ul>
+                                <li>LOADA - 1</li>
+                                <li>LOADB - 2</li>
+                                <li>CONB - 3</li>
+                                <li>SAVEB - 4</li>
+                                <li>SAVEC mem - 5</li>
+                                <li>ADD - 6</li>
+                                <li>SUB - 7</li>
+                                <li>MUL - 8</li>
+                                <li>DIV - 9</li>
+                                <li>COM - 10</li>
+                                <li>JUMP addr - 11</li>
+                                <li>JEQ addr - 12</li>
+                                <li>JNEQ addr - 13</li>
+                                <li>JG addr - 14</li>
+                                <li>JGE addr - 15</li>
+                                <li>JL addr - 16</li>
+                                <li>JLE addr -17</li>
+                                <li>STOP - 18</li>
+                            </ul>
+                        </p>
+                        <P>The numbers are known as <strong>opcodes</strong>. In ROM, our little program would look like this:</P>
+                        <p class="example">// Assume a is at address 128// Assume F is at address 129Addr opcode/value0 3 // CONB 11 12 4 
+                            // SAVEB 1283 1284 3 // CONB 15 16 4 // SAVEB 1297 1298 1 // LOADA 1289 12810 3 // CONB 511 512 10 // COM13 14 
+                            // JG 1714 3115 1 // LOADA 12916 12917 2 // LOADB 12818 12819 8 // MUL20 5 // SAVEC 12921 12922 1 // LOADA 
+                            12823 12824 3 // CONB 125 126 6 // ADD27 5 // SAVEC 12828 12829 11 // JUMP 430 831 18 // STOP</p>
+                        <p>You can see that seven lines of C code became 18 lines of assembly language, and that became 32 bytes in ROM.</p>
+                        <h4>Decoding</h4>
+                        <p>The instruction decoder needs to turn each of the opcodes into a set of signals that drive the different components 
+                            inside the microprocessor. Let's take the ADD instruction as an example and look at what it needs to do:
+                            <ol>
+                                <li>During the first clock cycle, we need to load the instruction. Therefore, the instruction decoder needs to:</li>
+                                <li>activate the tri-state buffer for the program counter</li>
+                                <li>activate the RD line</li>
+                                <li>activate the data-in tri-state buffer</li>
+                                <li>latch the instruction into the instruction register</li>
+                                <li>During the second clock cycle, the ADD instruction is decoded. It needs to do very little:</li>
+                                <li>set the operation of the ALU to addition</li>
+                                <li>latch the output of the ALU into the C register</li>
+                                <li>During the third clock cycle, the program counter is incremented (in theory this could be overlapped into the second clock cycle).</li>
+                            </ol>
+                        </p>
+                        <p>
+                            Every instruction can be broken down as a set of sequenced operations like these that manipulate the components of the microprocessor in the proper order. 
+                            Some instructions, like this ADD instruction, might take two or three clock cycles. Others might take five or six clock cycles. 
+                        </p>
+
+                    </div>
+                </div>
+                <div id="section-5">
+                    <div class="about">
+                        <!-- <i class="fa fa-chevron-up"></i> -->
+                        <i class="fa fa-chevron-down" onclick="showandhide()"></i>
+                        <p>Microprocessor Performance and Trends</p>
+                    </div>
+                    <div id="section-five">
+                        <p>
+                            The number of <strong>transistors</strong> available has a huge effect on the performance of a processor. As seen earlier, a typical instruction in a 
+                            processor like an 8088 took 15 clock cycles to execute. Because of the design of the multiplier, it took approximately 80 cycles just to do one 16-bit
+                             multiplication on the 8088. With more 
+                            <a href="https://electronics.howstuffworks.com/transistor.htm">transistors</a>, much more powerful multipliers capable of single-cycle speeds become possible.
+                        </p>
+                        <p>More transistors also allow for a technology called <a href="https://cs.stanford.edu/people/eroberts/courses/soco/projects/risc/pipelining/index.html">pipelining</a>. 
+                            In a pipelined architecture, instruction execution overlaps. So even though it might take five clock cycles to execute each instruction, there can be five instructions 
+                            in various stages of execution simultaneously. That way it looks like one instruction completes every clock cycle. </p>
+                        <p>
+                            Many modern processors have multiple instruction decoders, each with its own pipeline. This allows for multiple instruction streams, which means that more than one
+                             instruction can complete during each clock cycle. This technique can be quite complex to implement, so it takes lots of transistors. 
+                        </p>
+                        <h4>Trends</h4>
+                        <p>
+                            These days it seems like processors are everywhere, and that trend doesn't appear to be slowing. Researchers have found ways to <a href="https://cen.acs.org/materials/electronic-materials/Researchers-report-complex-flexible-microprocessor/99/web/2021/07">
+                            make microprocessors flexible</a>, enabling items such as <a href="https://atap.google.com/jacquard/">smart clothing</a>. Researchers have been working on ways to use 
+                            <a href="https://www.colorado.edu/today/2015/12/23/breakthrough-light-based-microprocessor-chip-could-lead-more-powerful-computers-network">light, rather than electricity</a>, 
+                            to operate processors. Probably the biggest change on the horizon is the development of quantum computers, which aren't restricted to using 1s and 0s to solve problems. 
+                            While these computers can <a href="https://docs.microsoft.com/en-us/azure/quantum/overview-understanding-quantum-computing">process more difficult problems</a> more 
+                            efficiently, it's unlikely you will see a quantum computer on your desktop anytime soon. 
+                        </p>
+                    </div>
+                </div>
+                <div id="section-6">
+                    <div class="about">
+                        <!-- <i class="fa fa-chevron-up"></i> -->
+                        <i class="fa fa-chevron-down" onclick="showandhide()"></i>
+                        <p>64-bit Microprocessor</p>
+                    </div>
+                    <div id="section-six">
+                        <figure>
+                            <img src="./images/microprocessor4.png" alt="">
+                            <figcaption>Find out how 64-bit processors work and why they can handle an almost infinite amount of RAM. <span>AMD</span></figcaption>
+                        </figure>
+                        <p>Sixty-four-bit processors have been with us since 1992, and in the 21st century they have become mainstream. These processors have 64-bit ALUs, 64-bit registers, 64-bit buses and so on.</p>
+                        <p>One reason why the world needs 64-bit processors is because of their <strong>enlarged address spaces</strong>. Thirty-two-bit chips are often constrained to a maximum of 2 GB
+                             or 4 GB of <a href="https://computer.howstuffworks.com/ram.htm">RAM access</a>. That seemed like a lot when most home computers used only 256 MB to 512 MB of RAM. But 
+                             21st-century home computers can process data (very complex data features lots of real numbers) faster. People doing <a href="https://computer.howstuffworks.com/video-editing.htm">video editing</a>
+                             and people doing photographic editing on very large images benefit from this kind of computing power. High-end gamers also benefit from more detailed high-resolution games.
+                        </p>
+                        <p>
+                            A 64-bit chip opens up more options because a 64-bit RAM address space is essentially infinite for the foreseeable future — 2^64 bytes of RAM is something on the order of a 
+                            billion gigabytes of RAM. With a 64-bit address bus and wide, high-speed data buses on the <a href="https://computer.howstuffworks.com/motherboard.htm">motherboard</a>, 64-bit machines 
+                            also offer faster I/O (input/output) speeds to things like <a href="https://computer.howstuffworks.com/hard-disk.htm">hard disk drives</a> and 
+                            <a href="https://computer.howstuffworks.com/graphics-card.htm">video cards</a>. These features can greatly increase system performance.
+                        </p>
+                        <p>For more information on microprocessors and related topics, check out the following links.</p>
+                        <p>Originally Published: Apr 1, 2000</p>
+                    </div>
+                </div>
+                <div id="section-7">
+                    <div class="about">
+                        <!-- <i class="fa fa-chevron-up"></i> -->
+                        <i class="fa fa-chevron-down" onclick="showandhide()"></i>
+                        <p>Lots More Information</p>
+                    </div>
+                    <div id="section-seven">
+                        <h4>Related Articles</h4>
+                        <ul>
+                            <li><a href="https://computer.howstuffworks.com/question307.htm">Why are there limits on CPU speed?</a></li>
+                            <li><a href="https://electronics.howstuffworks.com/diode.htm">How Semiconductors Work</a></li>
+                            <li><a href="https://computer.howstuffworks.com/pc.htm">How PCs Work</a></li>
+                            <li><a href="https://computer.howstuffworks.com/c.htm">How C Programming Works</a></li>
+                            <li><a href="https://computer.howstuffworks.com/program.htm">How Java Works</a></li>
+                            <li><a href="https://computer.howstuffworks.com/operating-system.htm">How Operating Systems Work</a></li>
+                            <li><a href="https://computer.howstuffworks.com/computer-memory.htm">How Computer Memory Works</a></li>
+                            <li><a href="https://computer.howstuffworks.com/quantum-computer.htm">How Quantum Computers Work</a></li>
+                            <li><a href="https://computer.howstuffworks.com/dna-computer.htm">How DNA Computers Will Work</a></li>
+                        </ul>
+                        <h4>More Great Links</h4>
+                        <ul>
+                            <li><a href="http://www.webopedia.com/TERM/m/microprocessor.html">Webopedia: microprocessor</a></li>
+                            <li><a href="http://www.azillionmonkeys.com/qed/cpuwar.html">6th Generation CPU Comparisons</a></li>
+                            <li><a href="http://www.azillionmonkeys.com/qed/cpujihad.shtml">7th Generation CPU Comparisons</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="section-8">
+                    <div class="about">
+                        <!-- <i class="fa fa-chevron-up"></i> -->
+                        <i class="fa fa-chevron-down" onclick="showandhide()"></i>
+                        <p>Sources</p>
+                    </div>
+                    <div id="section-eight">
+                        <ul>
+                            <li>CU Boulder Today. "Breakthrough light-based microprocessor chip could lead to more powerful 
+                                computers, network infrastructure." Dec. 23, 2015 (Sept. 22, 2021) 
+                                https://www.colorado.edu/today/2015/12/23/breakthrough-light-based-microprocessor-chip-could-lead-more-powerful-computers-network</li>
+                            <li>Microsoft. "Understanding quantum computing." Feb.1, 2021. 
+                                https://docs.microsoft.com/en-us/azure/quantum/overview-understanding-quantum-computing</li>
+                            <li>Patel, Prachi. C&EN. "Researchers report the most complex flexible microprocessor yet Chip packs over
+                                 39,000 transistors on a plastic film." July 26, 2021. 
+                                 https://cen.acs.org/materials/electronic-materials/Researchers-report-complex-flexible-microprocessor/99/web/2021/07</li>
+                            <li>Salman, Ali. wccftech.com. Jun 18, 2021. "Samsung Might Design Its Own Custom CPU as it Seeks Former 
+                                Apple and AMD Engineers." https://wccftech.com/samsung-might-design-its-own-custom-cpu-as-it-seeks-former-apple-and-amd-engineers/</li>
+                            <li>Stanford University. "How Pipelining Works." (Sept. 22, 2021) 
+                                https://cs.stanford.edu/people/eroberts/courses/soco/projects/risc/pipelining/index.html</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="share">
+                    <div class="share-one">
+                        <p><strong>Share:</strong></p>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div class="share-two">
+                        <a href="https://computer.howstuffworks.com/microprocessor.htm#">Citation</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <div class="extras">
+            <div class="extras-title">
+                <h1>More About CPUs</h1>
+                <div class="gradient"></div>
+            </div>
+            <a href="https://computer.howstuffworks.com/what-is-the-difference-between-a-pentium-and-a-celeron-processor.htm">
+                <div class="extras-one">
+                    <img src="./images/difference.png" alt="">
+                    <div class="difference">
+                        <p class="top"><strong>Up Next</strong></p>
+                        <p>What is the difference Between a Pentium and a Celeron Processor?</p>
+                        <button class="explore">EXPLORE MORE</button>
+                    </div>
+                </div>
+            </a>
+            <div class="extras-two">
+                <div class="feat one">
+                    <a href="https://computer.howstuffworks.com/how-to-protect-privacy-online.htm?utm_source=howstuffworks&utm_medium=promoted-recirc">
+                        <img src="./images/more1.jpg" alt="">
+                        <div class="featured">
+                            <h5>Featured</h5>
+                            <p>Special Offer on Antivirus Software From HowStuffWorks and TotalAV Security</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="feat two">
+                    <a href="https://entertainment.howstuffworks.com/leisure/online-games/crossword-puzzles.htm?utm_source=howstuffworks&utm_medium=promoted-recirc">
+                        <img src="./images/more2.jpg" alt="">
+                        <div class="featured">
+                            <h5>Featured</h5>
+                            <p>Try Our Crossword Puzzles!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="feat three">
+                    <a href="https://entertainment.howstuffworks.com/leisure/online-games/riddle-game-70?utm_source=howstuffworks&utm_medium=promoted-recirc">
+                        <img src="./images/more3.jpg" alt="">
+                        <div class="featured">
+                            <h5>Featured</h5>
+                            <p>Can You Solve This Riddle?</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="feat four">
+                    <a href="https://play.howstuffworks.com/quiz/cpu-quiz?utm_source=howstuffworks&utm_medium=recirc">
+                        <img src="./images/more4.webp" alt="">
+                        <div class="featured">
+                            <h5>The World</h5>
+                            <p>Tech Talk: CPU Quiz</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="feat five">
+                    <a href="https://computer.howstuffworks.com/nehalem-microprocessor-microarchitecture.htm?utm_source=howstuffworks&utm_medium=recirc">
+                        <img src="./images/more5.webp" alt="">
+                        <div class="featured">
+                            <h5>Computer</h5>
+                            <p>How the Nehalem Microprocessor Microarchitecture Works</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="feat six">
+                    <a href="https://computer.howstuffworks.com/computer-memory.htm?utm_source=howstuffworks&utm_medium=recirc">
+                        <img src="./images/more6.webp" alt="">
+                        <div class="featured">
+                            <h5>Computer</h5>
+                            <p>How Computer Memory Works</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <a href="https://computer.howstuffworks.com/small-cpu.htm">
+                <div class="extras-three">
+                    <img src="./images/may.png" alt="">
+                    <div class="difference">
+                        <p class="top"><strong>You May Like</strong></p>
+                        <p>How small can CPUs get?</p>
+                        <button class="explore">EXPLORE MORE</button>
+                    </div>
+                </div>
+            </a>
+            <div class="extras-four">
+                <div class="feat seven">
+                    <a href="https://computer.howstuffworks.com/bios.htm?utm_source=howstuffworks&utm_medium=recirc">
+                        <img src="./images/more7.webp" alt="">
+                        <div class="featured">
+                            <h5>Computer</h5>
+                            <p>How BIOS Works</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="feat eight">
+                    <a href="https://computer.howstuffworks.com/pc.htm?utm_source=howstuffworks&utm_medium=recirc">
+                        <img src="./images/more8.webp" alt="">
+                        <div class="featured">
+                            <h5>Computer</h5>
+                            <p>How PCs Work</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="feat nine">
+                    <a href="https://computer.howstuffworks.com/sandy-bridge.htm?utm_source=howstuffworks&utm_medium=recirc">
+                        <img src="./images/more9.webp" alt="">
+                        <div class="featured">
+                            <h5>Computer</h5>
+                            <p>How Sandy Bridge Works</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="feat ten">
+                    <a href="https://computer.howstuffworks.com/question299.htm?utm_source=howstuffworks&utm_medium=recirc">
+                        <img src="./images/more10.webp" alt="">
+                        <div class="featured">
+                            <h5>Computer</h5>
+                            <p>Is it true that the Mac G4 processor is twice as fast as a Pentium III?</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="feat eleven">
+                    <a href="https://computer.howstuffworks.com/what-is-computer-hardware.htm?utm_source=howstuffworks&utm_medium=recirc">
+                        <img src="./images/more11.webp" alt="">
+                        <div class="featured">
+                            <h5>Computer</h5>
+                            <p>What is computer hardware?</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="feat twelve">
+                    <a href="https://computer.howstuffworks.com/parallel-processing.htm?utm_source=howstuffworks&utm_medium=recirc">
+                        <img src="./images/more12.webp" alt="">
+                        <div class="featured">
+                            <h5>Computer</h5>
+                            <p>How Parallel Processing Works/p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <a href="https://computer.howstuffworks.com/question307.htm">
+                <div class="extras-five">
+                    <img src="./images/why.png" alt="">
+                    <div class="difference">
+                        <p class="top"><strong>Keep Reading</strong></p>
+                        <p>Why are there limits on CPU speed?</p>
+                        <button class="explore">EXPLORE MORE</button>
+                    </div>
+                </div>
+            </a>
+            <div class="end"></div>
+        </div>
+    </body>
+</html>
